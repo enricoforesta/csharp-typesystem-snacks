@@ -191,7 +191,7 @@ namespace csharp_typesystem_snacks
             Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
             Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
             */
-
+            /*
             int[] arrayDispari = new int[50];
             int somma = 0;
             int target = 50;
@@ -214,6 +214,32 @@ namespace csharp_typesystem_snacks
             }
 
             Console.WriteLine($"La somma è: {somma}");
+            */
+
+            /*
+            Snack 10
+            Fai inserire un numero, che chiameremo N, all’utente.
+            Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+            Ogni volta che ne crei uno, stampalo a schermo.
+            */
+
+            Console.WriteLine("Inserisci quanti array vuoi creare");
+            Random random = new Random();
+            int N = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < N; i++)
+            {
+                int[] arrayNumber = new int[10];
+
+                for (int x = 0; x < 10; x++)
+                {
+                    arrayNumber[x] = random.Next(1, 101); 
+                }
+                Console.WriteLine($"array {i+1}");
+                foreach (int numero in arrayNumber)
+                {
+                    Console.WriteLine(numero);
+                }
+            }
         }
     }
 }
