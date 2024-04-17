@@ -36,15 +36,11 @@ namespace csharp_typesystem_snacks
             }
             Console.WriteLine($"I numeri sono {primoNumero}-{secondoNumero}");
             */
-
-
-
             /*
             Snack 2
             L’utente inserisce due parole in successione.
             Il software stampa prima la parola più corta, poi la parola più lunga.
             */
-
             /*
              Console.WriteLine($"inserisci due parole");
 
@@ -63,8 +59,6 @@ namespace csharp_typesystem_snacks
                  Console.WriteLine($"La parola più corta è {primaParola} , la parola più lunga è {secondaParola}");
              }
              */
-
-
             /* 
             Snack 3
             Il software deve chiedere per 10 volte all’utente di inserire un numero.
@@ -84,8 +78,6 @@ namespace csharp_typesystem_snacks
                 Console.WriteLine($"La somma dei numeri è {somma}");
             }
             */
-
-
             /* 
             Snack 4
             Calcola la somma e la media dei numeri da 2 a 10.
@@ -182,6 +174,7 @@ namespace csharp_typesystem_snacks
              Snack 8
             Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
             */
+            /*
             int[] numeriArray = { 10, 25, 6, 42, 3, 18, 33, 7, 48, 14, 30, 20, 9, 45, 2, 38, 17, 11, 49, 5 };
             int somma = 0;
             for (int i = 0; i < numeriArray.Length; i++)
@@ -192,6 +185,35 @@ namespace csharp_typesystem_snacks
                 }
             }
             Console.WriteLine($"la somma è {somma}");
+            */
+            /*
+            Snack 9
+            Crea un array vuoto e chiedi all’utente un numero da inserire nell’array.
+            Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+            */
+
+            int[] arrayDispari = new int[50];
+            int somma = 0;
+            int target = 50;
+            int indice = 0; // Usato per tener traccia dell'indice corrente dell'array
+
+            Console.WriteLine($"Inserisci numeri, diverso da 0, finché la somma non è maggiore di {target}:");
+            while (somma < target)
+            {
+                int numero = Convert.ToInt32(Console.ReadLine());
+                if (numero != 0) 
+                { 
+                    arrayDispari[indice] = numero; 
+                    somma += numero; 
+                    indice++;
+                }
+                else
+                {
+                    Console.WriteLine("Numero non valido");
+                }
+            }
+
+            Console.WriteLine($"La somma è: {somma}");
         }
     }
 }
