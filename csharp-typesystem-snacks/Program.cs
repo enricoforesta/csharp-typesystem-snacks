@@ -164,6 +164,7 @@ namespace csharp_typesystem_snacks
             Crea un array vuoto.
             Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
             */
+            /*
             int[] arrayDispari = new int[6];
             Console.WriteLine("inserisci un numero");
             for (int i = 0; i < arrayDispari.Length; i++)
@@ -176,6 +177,21 @@ namespace csharp_typesystem_snacks
             { 
                 if(i != 0) Console.WriteLine(i); 
             }
+            */
+            /*
+             Snack 8
+            Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+            */
+            int[] numeriArray = { 10, 25, 6, 42, 3, 18, 33, 7, 48, 14, 30, 20, 9, 45, 2, 38, 17, 11, 49, 5 };
+            int somma = 0;
+            for (int i = 0; i < numeriArray.Length; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    somma += numeriArray[i];
+                }
+            }
+            Console.WriteLine($"la somma è {somma}");
         }
     }
 }
