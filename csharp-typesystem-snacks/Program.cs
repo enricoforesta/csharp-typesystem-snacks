@@ -127,6 +127,7 @@ namespace csharp_typesystem_snacks
              In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. 
              Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
             */
+            /*
             string[] friends =
             {
                 "Alice",
@@ -157,7 +158,24 @@ namespace csharp_typesystem_snacks
             {
                 Console.WriteLine("Non sei invitato, addio!");
             }
-            
+            */
+            /*
+            Snack 7
+            Crea un array vuoto.
+            Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+            */
+            int[] arrayDispari = new int[6];
+            Console.WriteLine("inserisci un numero");
+            for (int i = 0; i < arrayDispari.Length; i++)
+            {
+                int output = Convert.ToInt32(Console.ReadLine());
+                if(output % 2  != 0) arrayDispari[i] = output;
+            }
+            Console.WriteLine("Array");
+            foreach(int i in arrayDispari) 
+            { 
+                if(i != 0) Console.WriteLine(i); 
+            }
         }
     }
 }
