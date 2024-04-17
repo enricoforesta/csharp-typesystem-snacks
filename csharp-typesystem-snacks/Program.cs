@@ -70,7 +70,8 @@ namespace csharp_typesystem_snacks
             Il software deve chiedere per 10 volte all’utente di inserire un numero.
             Il programma stampa la somma di tutti i numeri inseriti.
             */
-            int richiesta = 10;
+            /*
+           { int richiesta = 10;
             int somma = 0;
 
             Console.WriteLine($"inserisci {richiesta} numeri");
@@ -80,7 +81,30 @@ namespace csharp_typesystem_snacks
                 somma += output;
 
             }
-            Console.WriteLine($"La somma dei numeri è {somma}");
+                Console.WriteLine($"La somma dei numeri è {somma}");
+            }
+            /*
+
+
+            /* 
+            Snack 4
+            Calcola la somma e la media dei numeri da 2 a 10.
+            */
+            {
+                int somma = 0;
+
+                int primoNumero = 2;
+                int ultimoNumero = 10;
+
+                int numeriTotali = ultimoNumero - primoNumero + 1;
+                for(int i = primoNumero;  i <= ultimoNumero; i++)
+                {
+                    somma += i;
+                }
+                double media =Convert.ToDouble( somma) / numeriTotali;
+                Console.WriteLine($"La somma è: {somma}");
+                Console.WriteLine($"La media è: {media}");
+            }
 
         }
     }
