@@ -215,7 +215,6 @@ namespace csharp_typesystem_snacks
 
             Console.WriteLine($"La somma è: {somma}");
             */
-
             /*
             Snack 10
             Fai inserire un numero, che chiameremo N, all’utente.
@@ -235,9 +234,9 @@ namespace csharp_typesystem_snacks
                     arrayNumber[x] = random.Next(1, 101); 
                 }
                 Console.WriteLine($"array {i+1}");
-                foreach (int numero in arrayNumber)
+                foreach (int number in arrayNumber)
                 {
-                    Console.WriteLine(numero);
+                    Console.WriteLine(number);
                 }
             }
         }
