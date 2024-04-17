@@ -90,12 +90,11 @@ namespace csharp_typesystem_snacks
             Snack 4
             Calcola la somma e la media dei numeri da 2 a 10.
             */
+            /*
             {
                 int somma = 0;
-
                 int primoNumero = 2;
                 int ultimoNumero = 10;
-
                 int numeriTotali = ultimoNumero - primoNumero + 1;
                 for(int i = primoNumero;  i <= ultimoNumero; i++)
                 {
@@ -104,6 +103,22 @@ namespace csharp_typesystem_snacks
                 double media =Convert.ToDouble( somma) / numeriTotali;
                 Console.WriteLine($"La somma è: {somma}");
                 Console.WriteLine($"La media è: {media}");
+            }
+            /*
+            /*
+             Snack 5
+             Il software chiede all’utente di inserire un numero.
+             Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+            */
+            Console.WriteLine("Inserisci un numero");
+            int output = Convert.ToInt32(Console.ReadLine());
+            if(output % 2 == 0) 
+            {
+                Console.WriteLine($"{output}");
+            }
+            else
+            {
+                Console.WriteLine($"{output + 1}");
             }
 
         }
