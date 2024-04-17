@@ -83,7 +83,7 @@ namespace csharp_typesystem_snacks
             }
                 Console.WriteLine($"La somma dei numeri è {somma}");
             }
-            /*
+            */
 
 
             /* 
@@ -104,12 +104,13 @@ namespace csharp_typesystem_snacks
                 Console.WriteLine($"La somma è: {somma}");
                 Console.WriteLine($"La media è: {media}");
             }
-            /*
+            */
             /*
              Snack 5
              Il software chiede all’utente di inserire un numero.
              Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
             */
+            /*
             Console.WriteLine("Inserisci un numero");
             int output = Convert.ToInt32(Console.ReadLine());
             if(output % 2 == 0) 
@@ -119,8 +120,44 @@ namespace csharp_typesystem_snacks
             else
             {
                 Console.WriteLine($"{output + 1}");
+            } 
+            */
+            /*
+             Snack 6
+             In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. 
+             Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+            */
+            string[] friends =
+            {
+                "Alice",
+                "Bob",
+                "Charlie",
+                "David",
+                "Emma",
+                "Frank",
+                "Gina"
+            };
+            Console.WriteLine("Inserisci il tuo nome");
+            string output = Console.ReadLine();
+            bool check = false;
+            foreach (string friend in friends)
+            {
+                if(friend == output)
+                {
+                    check = true;
+                    break;
+                }
             }
 
+            if (check)
+            {
+                Console.WriteLine($"Benvenuto {output}, Divertiti");
+            }
+            else
+            {
+                Console.WriteLine("Non sei invitato, addio!");
+            }
+            
         }
     }
 }
