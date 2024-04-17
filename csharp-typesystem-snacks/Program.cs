@@ -1,4 +1,7 @@
-﻿namespace csharp_typesystem_snacks
+﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.ConstrainedExecution;
+
+namespace csharp_typesystem_snacks
 {
     internal class Program
     {
@@ -42,23 +45,43 @@
             Il software stampa prima la parola più corta, poi la parola più lunga.
             */
 
-            Console.WriteLine($"inserisci due parole");
+            /*
+             Console.WriteLine($"inserisci due parole");
 
-            string primaParola = Console.ReadLine();
-            string secondaParola = Console.ReadLine();
-            if (primaParola.Length == secondaParola.Length)
+             string primaParola = Console.ReadLine();
+             string secondaParola = Console.ReadLine();
+             if (primaParola.Length == secondaParola.Length)
+             {
+                 Console.WriteLine($"Le parole hanno la stessa lunghezza {primaParola} - {secondaParola}");
+             }
+             else if (primaParola.Length > secondaParola.Length)
+             {
+                 Console.WriteLine($"La parola più corta è {secondaParola}, la parola più lunga è {primaParola}");
+             }
+             else
+             {
+                 Console.WriteLine($"La parola più corta è {primaParola} , la parola più lunga è {secondaParola}");
+             }
+             */
+
+
+            /* 
+            Snack 3
+            Il software deve chiedere per 10 volte all’utente di inserire un numero.
+            Il programma stampa la somma di tutti i numeri inseriti.
+            */
+            int richiesta = 10;
+            int somma = 0;
+
+            Console.WriteLine($"inserisci {richiesta} numeri");
+            for (int i = 0; i < richiesta; i++)
             {
-                Console.WriteLine($"Le parole hanno la stessa lunghezza {primaParola} - {secondaParola}");
-            }
-            else if (primaParola.Length > secondaParola.Length)
-            {
-                Console.WriteLine($"La parola più corta è {secondaParola}, la parola più lunga è {primaParola}");
-            }
-            else
-            {
-                Console.WriteLine($"La parola più corta è {primaParola} , la parola più lunga è {secondaParola}");
+                int output = Convert.ToInt32(Console.ReadLine());
+                somma += output;
 
             }
+            Console.WriteLine($"La somma dei numeri è {somma}");
+
         }
     }
 }
